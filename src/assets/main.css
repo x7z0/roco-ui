@@ -1,0 +1,111 @@
+@import './base.css';
+
+#app {
+  max-width: 100%;
+  
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.5);
+  
+  overflow:auto;
+}
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+header {
+  line-height: 1.5;
+  height: var(--header-height);
+  position:sticky;
+  top: 0;
+  place-items: center;
+  display: flex;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.6);
+  
+  box-shadow: 2px 2px 4px #000000b2;
+  overflow: hidden;
+  
+}
+main {
+  height: 100%;
+  margin: 0 var(--main-margin-side) var(--main-margin-bottom);
+  box-shadow: 2px 5px 2px 5px rgba(48, 41, 39, 0.5);
+  background-color: #fefdca5e;
+  background-color: #ffffff00;
+  backdrop-filter: blur(2px);
+  overflow: auto;
+  padding: 2rem;
+}
+
+#app > main {
+  height: calc(100vh - var(--header-height) - var(--main-margin-bottom));
+  margin: 0 var(--main-margin-side) var(--main-margin-bottom);
+  box-shadow: 2px 5px 2px 5px rgba(48, 41, 39, 0.5);
+  background-color: #fefdca5e;
+  background-color: #ffffff00;
+  backdrop-filter: blur(2px);
+  overflow: auto;
+  padding: 2rem;
+}
+
+a.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  
+}
+
+@media (max-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+    
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  header{
+    display: flexbox;
+  }
+  #app {
+    
+    padding: 2rem;
+    padding: 0;
+  }
+}
+
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #27ad63 #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  
+  width: 15px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: #DFE9EB;
+}
+
+
+
+
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #27ad63;
+}
+
